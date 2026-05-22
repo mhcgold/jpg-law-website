@@ -1503,6 +1503,43 @@ p { color: var(--text-muted); line-height: 1.75; }
   align-items: start;
 }
 .practice-detail-side { position: sticky; top: calc(var(--nav-h) + 24px); }
+
+/* Service category cards */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 28px 0 36px;
+}
+.service-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+}
+.service-card h3 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 8px;
+}
+.service-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Section headings inside practice content (Who we support, etc.) */
+.practice-detail-content > h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 32px 0 12px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+}
 .practice-list {
   list-style: none;
   display: flex;
@@ -1725,6 +1762,7 @@ p { color: var(--text-muted); line-height: 1.75; }
   .bio-focus-list      { grid-template-columns: 1fr; }
   .footer-inner        { grid-template-columns: 1fr; }
   .page-hero           { padding: 48px 0 40px; }
+  .service-grid        { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 540px) {
