@@ -12,6 +12,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Open Graph / LinkedIn / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.jpg-law.net/">
+  <meta property="og:title" content="JPG Law — Fractional General Counsel for Tech & Staffing">
+  <meta property="og:description" content="Business-first legal counsel for IT staffing firms, tech companies, and employers. Flat-fee GC Subscription, CIPP/US privacy expertise, and Pacta contract intelligence. Nationwide from Indianapolis.">
+  <meta property="og:image" content="https://www.jpg-law.net/assets/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JPG Law — Fractional General Counsel for Tech & Staffing">
+  <meta name="twitter:description" content="Business-first legal counsel for IT staffing firms, tech companies, and employers. Flat-fee GC Subscription, CIPP/US privacy expertise, and Pacta contract intelligence. Nationwide from Indianapolis.">
+  <meta name="twitter:image" content="https://www.jpg-law.net/assets/images/og-image.jpg">
 </head>
 <body>
 
@@ -73,6 +83,7 @@
   <a href="/practice-areas/startup/" class="mobile-indent">Startup Formation &amp; Funding</a>
   <a href="/practice-areas/immigration/" class="mobile-indent">Employment Based Immigration</a>
   <a href="/practice-areas/general-business/" class="mobile-indent">General Business Law</a>
+  <a href="/practice-areas/legal-tech/" class="mobile-indent">Legal Technology Consulting</a>
   <a href="/gc-subscription/">GC Subscription</a>
   <a href="/testimonials/">Testimonials</a>
   <a href="/contact/" style="color:var(--accent);font-weight:700;">Contact us</a>
@@ -441,5 +452,81 @@
 </footer>
 
 <script src="/assets/js/main.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LegalService", "LocalBusiness"],
+      "@id": "https://www.jpg-law.net/#firm",
+      "name": "JPG Law",
+      "alternateName": "Jason Paul Gehlhausen d/b/a JPG Law",
+      "description": "Fractional general counsel and business legal services for technology companies, IT staffing firms, and employers. Specializing in employment law, technology transactions, privacy, commercial contracts, and legal technology consulting.",
+      "url": "https://www.jpg-law.net",
+      "telephone": "+13173248451",
+      "email": "info@jpg-law.net",
+      "logo": "https://www.jpg-law.net/assets/images/logo.png",
+      "image": "https://www.jpg-law.net/assets/images/og-image.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1221 N New Jersey Street, Suite 1/2",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "postalCode": "46202",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.7852,
+        "longitude": -86.1487
+      },
+      "areaServed": {"@type": "Country", "name": "United States"},
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/jpg-law/",
+        "https://twitter.com/JPGLawIndy",
+        "https://www.pactalegal.ai"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Legal Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Staffing & Contingent Workforce Law"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Employment Law for Employers"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Technology & SaaS Transactions"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Privacy & Data Protection"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "GC Subscription — Flat-Fee General Counsel"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Legal Technology Consulting"}}
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.jpg-law.net/about/jason/#jason",
+      "name": "Jason Paul Gehlhausen",
+      "jobTitle": "Founding Attorney",
+      "worksFor": {"@id": "https://www.jpg-law.net/#firm"},
+      "url": "https://www.jpg-law.net/about/jason/",
+      "image": "https://www.jpg-law.net/assets/images/jason-gehlhausen.jpg",
+      "alumniOf": [
+        {"@type": "EducationalOrganization", "name": "Indiana University Robert H. McKinney School of Law"},
+        {"@type": "EducationalOrganization", "name": "Indiana University Luddy School of Informatics, Computing, and Engineering"}
+      ],
+      "hasCredential": [
+        {"@type": "EducationalOccupationalCredential", "name": "Juris Doctor (J.D.)", "dateCreated": "2007"},
+        {"@type": "EducationalOccupationalCredential", "name": "B.S. Informatics", "dateCreated": "2004"},
+        {"@type": "EducationalOccupationalCredential", "name": "Certified Information Privacy Professional (CIPP/US)", "dateCreated": "2023"}
+      ],
+      "knowsAbout": ["Employment Law", "Staffing Industry Law", "Privacy Law", "Technology Transactions", "Legal Technology", "Contingent Workforce Compliance"]
+    }
+  ]
+}
+</script>
 </body>
 </html>
