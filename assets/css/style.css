@@ -488,11 +488,9 @@ p { color: var(--text-muted); line-height: 1.75; }
 .clients-intro p { max-width: 560px; margin: 10px auto 0; }
 
 .clients-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .client-badge {
@@ -501,10 +499,9 @@ p { color: var(--text-muted); line-height: 1.75; }
   justify-content: center;
   background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 12px 24px;
-  min-width: 160px;
-  min-height: 62px;
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  min-height: 110px;
   transition: border-color 0.15s, box-shadow 0.15s;
   text-decoration: none;
 }
@@ -515,10 +512,11 @@ p { color: var(--text-muted); line-height: 1.75; }
 }
 
 .client-badge img {
-  max-height: 36px;
-  max-width: 130px;
+  max-height: 64px;
+  max-width: 190px;
+  width: 100%;
   object-fit: contain;
-  filter: grayscale(30%) opacity(0.8);
+  filter: grayscale(20%) opacity(0.85);
   transition: filter 0.15s;
 }
 
@@ -1160,6 +1158,8 @@ p { color: var(--text-muted); line-height: 1.75; }
   .footer-grid        { grid-template-columns: 1fr 1fr; }
   .bio-grid           { grid-template-columns: 1fr; }
   .bio-sidebar        { position: static; }
+  .clients-grid       { grid-template-columns: repeat(2, 1fr); }
+  .client-strip       { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -1323,11 +1323,9 @@ p { color: var(--text-muted); line-height: 1.75; }
 
 /* Client strip */
 .client-strip {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 /* Footer — new layout (used across inner pages) */
