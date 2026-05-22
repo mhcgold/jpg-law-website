@@ -1829,3 +1829,14 @@ p { color: var(--text-muted); line-height: 1.75; }
 @media (max-width: 1024px) {
   .pacta-grid { grid-template-columns: 1fr; gap: 36px; }
 }
+
+/* ── Prose two-col (collapses to 1 on mobile) ───────────── */
+.prose-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .prose-two-col { grid-template-columns: 1fr; gap: 0; }
+}
