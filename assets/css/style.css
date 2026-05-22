@@ -1313,9 +1313,8 @@ p { color: var(--text-muted); line-height: 1.75; }
 .team-card:hover { box-shadow: var(--shadow); }
 .team-photo {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  object-position: center top;
+  height: auto;
+  display: block;
 }
 .team-info { padding: 20px; flex: 1; }
 .team-name { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
