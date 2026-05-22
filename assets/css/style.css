@@ -19,7 +19,7 @@
   --accent-dim:   #1E4D8C;
   --accent-light: rgba(45,95,168,0.09);
   --accent-glow:  rgba(45,95,168,0.15);
-  --nav-h:        64px;
+  --nav-h:        76px;
   --radius:       8px;
   --radius-lg:    14px;
   --shadow-sm:    0 1px 3px rgba(15,31,54,0.08), 0 1px 2px rgba(15,31,54,0.05);
@@ -152,7 +152,7 @@ p { color: var(--text-muted); line-height: 1.75; }
 }
 
 .nav-logo img {
-  height: 42px;
+  height: 58px;
   width: auto;
 }
 
@@ -657,7 +657,7 @@ p { color: var(--text-muted); line-height: 1.75; }
 .footer-brand { }
 
 .footer-logo img {
-  height: 44px;
+  height: 54px;
   width: auto;
   filter: brightness(0) invert(1);
   opacity: 0.9;
@@ -1165,6 +1165,7 @@ p { color: var(--text-muted); line-height: 1.75; }
 @media (max-width: 768px) {
   .nav-links, .nav-cta { display: none; }
   .nav-mobile-toggle  { display: block; }
+  .nav-logo img       { height: 48px; }
 
   .section   { padding: 56px 0; }
 
