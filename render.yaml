@@ -1,0 +1,55 @@
+services:
+  - type: web
+    name: jpg-law-website
+    env: static
+    staticPublishPath: .
+    buildCommand: ""
+    routes:
+      - type: rewrite
+        source: /about
+        destination: /about/
+      - type: rewrite
+        source: /about/jason
+        destination: /about/jason/
+      - type: rewrite
+        source: /practice-areas
+        destination: /practice-areas/
+      - type: rewrite
+        source: /practice-areas/staffing
+        destination: /practice-areas/staffing/
+      - type: rewrite
+        source: /practice-areas/employment
+        destination: /practice-areas/employment/
+      - type: rewrite
+        source: /practice-areas/technology
+        destination: /practice-areas/technology/
+      - type: rewrite
+        source: /practice-areas/privacy
+        destination: /practice-areas/privacy/
+      - type: rewrite
+        source: /practice-areas/commercial-contracts
+        destination: /practice-areas/commercial-contracts/
+      - type: rewrite
+        source: /practice-areas/cross-border
+        destination: /practice-areas/cross-border/
+      - type: rewrite
+        source: /practice-areas/corporate-compliance
+        destination: /practice-areas/corporate-compliance/
+      - type: rewrite
+        source: /practice-areas/disputes
+        destination: /practice-areas/disputes/
+      - type: rewrite
+        source: /practice-areas/startup
+        destination: /practice-areas/startup/
+      - type: rewrite
+        source: /practice-areas/immigration
+        destination: /practice-areas/immigration/
+      - type: rewrite
+        source: /practice-areas/general-business
+        destination: /practice-areas/general-business/
+      - type: rewrite
+        source: /testimonials
+        destination: /testimonials/
+      - type: rewrite
+        source: /contact
+        destination: /contact/
