@@ -12,6 +12,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    /* ── Homepage additions ───────────────────────── */
+    @media (max-width: 768px) {
+      .hp-jason-grid { grid-template-columns: 1fr !important; text-align: center; }
+      .hp-jason-grid img { margin: 0 auto; }
+      .hp-gcs-grid  { grid-template-columns: 1fr !important; gap: 40px !important; }
+    }
+  </style>
   <!-- Open Graph / LinkedIn / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.jpg-law.net/">
@@ -95,10 +103,10 @@
     <div class="hero-grid">
       <div class="hero-content">
         <span class="eyebrow">Fractional General Counsel &amp; Attorney at Law</span>
-        <h1>Business-first legal counsel for founders, operators, and employers</h1>
+        <h1>Legal counsel for IT staffing firms, technology companies, and employers</h1>
         <p class="hero-sub">Technology &amp; Contingent Workforce Experts — serving clients across the country with practical, responsive guidance that scales with your business.</p>
         <div class="hero-ctas">
-          <a href="/contact/" class="btn btn-primary btn-lg">Schedule a Consultation</a>
+          <a href="https://cal.com/jason-gehlhausen-oyejan/30min" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Schedule a Consultation</a>
           <a href="/practice-areas/" class="btn btn-outline btn-lg">View Practice Areas</a>
         </div>
       </div>
@@ -115,8 +123,8 @@
               <div class="hero-stat-label">Coverage</div>
             </div>
             <div class="hero-stat">
-              <div class="hero-stat-value">5K+</div>
-              <div class="hero-stat-label">Employee Orgs Advised</div>
+              <div class="hero-stat-value">10K+</div>
+              <div class="hero-stat-label">Contingent Workers</div>
             </div>
             <div class="hero-stat">
               <div class="hero-stat-value">CIPP/US</div>
@@ -287,29 +295,44 @@
     </div>
     <div class="clients-grid">
       <a href="https://www.ardorhealth.com/" target="_blank" rel="noopener" class="client-badge">
-        <img src="/assets/images/client-ardor.svg" alt="Ardor Health Solutions">
+        <img src="/assets/images/client-ardor.svg" alt="Ardor Health Solutions" loading="lazy">
       </a>
       <a href="https://www.ayokay.com/" target="_blank" rel="noopener" class="client-badge">
-        <img src="/assets/images/client-ayokay.png" alt="Ayokay">
+        <img src="/assets/images/client-ayokay.png" alt="Ayokay" loading="lazy">
       </a>
       <a href="https://www.braviaservices.com/" target="_blank" rel="noopener" class="client-badge">
-        <img src="/assets/images/client-bravia.png" alt="Bravia Services">
+        <img src="/assets/images/client-bravia.png" alt="Bravia Services" loading="lazy">
       </a>
       <a href="https://www.corepersonnelstaffing.com/" target="_blank" rel="noopener" class="client-badge">
-        <img src="/assets/images/client-core-personnel.png" alt="Core Personnel Staffing Services">
+        <img src="/assets/images/client-core-personnel.png" alt="Core Personnel Staffing Services" loading="lazy">
       </a>
       <a href="https://weareexos.com/" target="_blank" rel="noopener" class="client-badge">
-        <img src="/assets/images/client-exos.png" alt="EXOS Cyber Talent IT">
+        <img src="/assets/images/client-exos.png" alt="EXOS Cyber Talent IT" loading="lazy">
       </a>
       <a href="https://www.greenlight.ai/" target="_blank" rel="noopener" class="client-badge">
-        <img src="/assets/images/client-greenlight.png" alt="Greenlight">
+        <img src="/assets/images/client-greenlight.png" alt="Greenlight" loading="lazy">
       </a>
       <a href="https://www.thepropylaeum.org/" target="_blank" rel="noopener" class="client-badge">
-        <img src="/assets/images/client-propylaeum.png" alt="The Indianapolis Propylaeum">
+        <img src="/assets/images/client-propylaeum.png" alt="The Indianapolis Propylaeum" loading="lazy">
       </a>
       <a href="https://www.soulfoodprojectindy.org/" target="_blank" rel="noopener" class="client-badge">
-        <img src="/assets/images/client-soul-food-project.png" alt="Soul Food Project">
+        <img src="/assets/images/client-soul-food-project.png" alt="Soul Food Project" loading="lazy">
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Jason intro ─────────────────────────────────────── -->
+<section class="section section--tight" style="border-top:1px solid var(--border);">
+  <div class="container">
+    <div class="hp-jason-grid" style="display:grid; grid-template-columns:auto 1fr; gap:40px; align-items:center; max-width:780px; margin:0 auto;">
+      <img src="/assets/images/jason-gehlhausen.jpg" alt="Jason Paul Gehlhausen" loading="lazy" style="width:112px; height:112px; border-radius:50%; object-fit:cover; object-position:top; border:3px solid var(--bg-3); flex-shrink:0;">
+      <div>
+        <div style="font-size:1.05rem; font-weight:700; color:var(--text); margin-bottom:4px;">Jason Paul Gehlhausen</div>
+        <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:12px; text-transform:uppercase; letter-spacing:0.06em;">Founding Attorney · Licensed in Indiana · CIPP/US</div>
+        <p style="font-size:0.92rem; color:var(--text-muted); line-height:1.7; margin:0 0 14px;">Jason is a business attorney and fractional general counsel currently serving multiple IT staffing, technology, and professional services companies as GC or corporate counsel simultaneously. He works every matter himself — no associates, no handoffs.</p>
+        <a href="/about/jason/" style="font-size:0.88rem; color:var(--accent); font-weight:600; text-decoration:none;">Full biography →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -345,6 +368,49 @@
   </div>
 </section>
 
+<!-- ── GC Subscription feature ────────────────────────── -->
+<section class="section" style="background:var(--accent); color:#fff;">
+  <div class="container">
+    <div class="hp-gcs-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;">
+      <div>
+        <span style="display:inline-block; font-size:0.75rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; background:rgba(255,255,255,0.15); border-radius:999px; padding:5px 14px; margin-bottom:20px;">GC Subscription</span>
+        <h2 style="color:#fff; margin-bottom:16px;">Your general counsel. Flat monthly rate.</h2>
+        <p style="color:rgba(255,255,255,0.85); font-size:0.97rem; line-height:1.7; margin-bottom:28px;">Ongoing general counsel coverage — direct access to Jason, no hourly billing, no surprise invoices. Built for technology staffing firms and SaaS companies that need responsive legal support without the overhead of a full-time hire.</p>
+        <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center;">
+          <a href="/gc-subscription/" class="btn btn-white">See what's covered</a>
+          <a href="/contact/" style="display:inline-flex; align-items:center; color:rgba(255,255,255,0.85); font-size:0.9rem; font-weight:600; text-decoration:none;">Contact us →</a>
+        </div>
+      </div>
+      <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:14px;">
+        <li style="display:flex; gap:12px; align-items:flex-start; color:rgba(255,255,255,0.9); font-size:0.9rem; line-height:1.55;">
+          <span style="color:#fff; font-size:1rem; margin-top:1px; flex-shrink:0;">✓</span>
+          <span><strong style="color:#fff;">Unlimited consultations</strong> — call, email, or message; no clock running</span>
+        </li>
+        <li style="display:flex; gap:12px; align-items:flex-start; color:rgba(255,255,255,0.9); font-size:0.9rem; line-height:1.55;">
+          <span style="color:#fff; font-size:1rem; margin-top:1px; flex-shrink:0;">✓</span>
+          <span><strong style="color:#fff;">Contract review &amp; redlining</strong> — MSAs, SOWs, NDAs, vendor agreements, SaaS terms</span>
+        </li>
+        <li style="display:flex; gap:12px; align-items:flex-start; color:rgba(255,255,255,0.9); font-size:0.9rem; line-height:1.55;">
+          <span style="color:#fff; font-size:1rem; margin-top:1px; flex-shrink:0;">✓</span>
+          <span><strong style="color:#fff;">Employment &amp; HR support</strong> — policies, offer letters, compliance guidance</span>
+        </li>
+        <li style="display:flex; gap:12px; align-items:flex-start; color:rgba(255,255,255,0.9); font-size:0.9rem; line-height:1.55;">
+          <span style="color:#fff; font-size:1rem; margin-top:1px; flex-shrink:0;">✓</span>
+          <span><strong style="color:#fff;">Risk &amp; compliance</strong> — worker classification, privacy, multi-state requirements</span>
+        </li>
+        <li style="display:flex; gap:12px; align-items:flex-start; color:rgba(255,255,255,0.9); font-size:0.9rem; line-height:1.55;">
+          <span style="color:#fff; font-size:1rem; margin-top:1px; flex-shrink:0;">✓</span>
+          <span><strong style="color:#fff;">Corporate &amp; governance</strong> — entity maintenance, board resolutions, equity docs</span>
+        </li>
+        <li style="display:flex; gap:12px; align-items:flex-start; color:rgba(255,255,255,0.9); font-size:0.9rem; line-height:1.55;">
+          <span style="color:#fff; font-size:1rem; margin-top:1px; flex-shrink:0;">✓</span>
+          <span><strong style="color:#fff;">Pacta included</strong> — AI-native contract management, built for staffing law</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- ── Pacta ────────────────────────────────────────────── -->
 <section class="section pacta-section">
   <div class="container">
@@ -352,7 +418,7 @@
       <div class="pacta-text">
         <span class="eyebrow">Built by JPG Law</span>
         <h2>Pacta — contract intelligence, included for GC Subscription clients</h2>
-        <p>Pacta is the CLM built for staffing law. It reads incoming contracts, produces your redlines and legal memo, tracks every negotiation round, routes approval gates, and closes the loop through execution — without leaving the platform.</p>
+        <p>Pacta was developed out of JPG Law's own practice — built from the contract patterns, negotiation cycles, and multi-state compliance requirements we handle daily for IT staffing and technology clients. It's the CLM built for staffing law: reads incoming contracts, produces redlines and a legal memo, tracks every negotiation round, routes approval gates, and closes the loop through execution.</p>
         <p>GC Subscription clients get Pacta access included at no additional cost. It's the technology that keeps your contract pipeline moving between counsel touchpoints.</p>
         <a href="https://www.pactalegal.ai" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:1rem;">Learn more at pactalegal.ai</a>
       </div>
@@ -396,7 +462,7 @@
     <h2>Let's make legal a growth enabler</h2>
     <p>Whether you need ongoing fractional general counsel support or help on a specific project, we start by learning your business, your risk tolerance, and what "done" looks like.</p>
     <div class="cta-banner-btns">
-      <a href="/contact/" class="btn btn-white btn-lg">Schedule a Consultation</a>
+      <a href="https://cal.com/jason-gehlhausen-oyejan/30min" target="_blank" rel="noopener" class="btn btn-white btn-lg">Schedule a Consultation</a>
       <a href="/about/" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.3);color:#fff;">Learn about JPG Law</a>
     </div>
   </div>
@@ -404,46 +470,45 @@
 
 <!-- ── Footer ──────────────────────────────────────────── -->
 <footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <img src="/assets/images/logo.png" alt="JPG Law">
-        </div>
-        <p class="footer-brand-desc">Fractional general counsel and strategic legal services for founders, employers, and operators. Practical, business-first guidance that scales.</p>
-        <div class="footer-social">
-          <a href="https://twitter.com/JPGLawIndy" target="_blank" rel="noopener" title="Twitter">𝕏</a>
-          <a href="https://www.linkedin.com/company/jpg-law/" target="_blank" rel="noopener" title="LinkedIn">in</a>
-          <a href="mailto:info@jpg-law.net" title="Email">@</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h5>Practice Areas</h5>
-        <a href="/practice-areas/staffing/">Staffing &amp; Contingent Workforces</a>
-        <a href="/practice-areas/employment/">Employment Law for Employers</a>
-        <a href="/practice-areas/technology/">Technology &amp; SaaS</a>
-        <a href="/practice-areas/privacy/">Privacy &amp; Data Protection</a>
-        <a href="/practice-areas/commercial-contracts/">Commercial Contracts</a>
-        <a href="/practice-areas/cross-border/">Cross-Border Transactions</a>
-      </div>
-      <div class="footer-col">
-        <h5>More Areas</h5>
-        <a href="/practice-areas/corporate-compliance/">Corporate Compliance</a>
-        <a href="/practice-areas/disputes/">Disputes &amp; Pre-Lit</a>
-        <a href="/practice-areas/startup/">Startup &amp; Funding</a>
-        <a href="/practice-areas/immigration/">Immigration</a>
-        <a href="/practice-areas/general-business/">General Business Law</a>
-        <a href="/practice-areas/legal-tech/">Legal Technology Consulting</a>
-        <a href="/about/">About JPG Law</a>
-      </div>
-      <div class="footer-col">
-        <h5>Contact</h5>
-        <a href="/contact/">Get in touch</a>
-        <a href="tel:+13173248451">(317) 324-8451</a>
-        <a href="mailto:info@jpg-law.net">info@jpg-law.net</a>
-        <a href="https://maps.google.com/?q=1221+N+New+Jersey+St+Indianapolis+IN+46202" target="_blank" rel="noopener" style="line-height:1.5;">1221 N New Jersey St<br>Suite 1/2<br>Indianapolis, IN 46202</a>
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <a href="/" class="footer-logo">
+        <img src="/assets/images/logo.png" alt="JPG Law" loading="lazy">
+      </a>
+      <p class="footer-tagline">Fractional General Counsel for Staffing, Technology, and Growth Companies.</p>
+      <div class="footer-social">
+        <a href="https://twitter.com/JPGLawIndy" target="_blank" rel="noopener" title="Twitter">𝕏</a>
+        <a href="https://www.linkedin.com/company/jpg-law/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+        <a href="mailto:info@jpg-law.net" title="Email">@</a>
       </div>
     </div>
+    <div class="footer-col">
+      <div class="footer-heading">Practice Areas</div>
+      <a href="/practice-areas/staffing/">Staffing &amp; Contingent Workforces</a>
+      <a href="/practice-areas/employment/">Employment Law</a>
+      <a href="/practice-areas/technology/">Technology &amp; SaaS</a>
+      <a href="/practice-areas/privacy/">Privacy &amp; Data Protection</a>
+      <a href="/practice-areas/commercial-contracts/">Commercial Contracts</a>
+      <a href="/practice-areas/corporate-compliance/">Corporate Compliance</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-heading">More Services</div>
+      <a href="/practice-areas/cross-border/">Cross-Border Transactions</a>
+      <a href="/practice-areas/disputes/">Disputes &amp; Pre-Lit</a>
+      <a href="/practice-areas/startup/">Startup Formation</a>
+      <a href="/practice-areas/immigration/">Employment Immigration</a>
+      <a href="/practice-areas/general-business/">General Business Law</a>
+      <a href="/practice-areas/legal-tech/">Legal Technology Consulting</a>
+      <a href="/gc-subscription/">GC Subscription</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-heading">Contact</div>
+      <a href="mailto:info@jpg-law.net">info@jpg-law.net</a>
+      <a href="tel:+13173248451">(317) 324-8451</a>
+      <a href="https://maps.google.com/?q=1221+N+New+Jersey+St+Indianapolis+IN" target="_blank" rel="noopener" style="line-height:1.5;">1221 N New Jersey St<br>Suite 1/2<br>Indianapolis, IN 46202</a>
+    </div>
+  </div>
+  <div class="container">
     <div class="footer-bottom">
       <p class="footer-disclaimer">Jason Paul Gehlhausen d/b/a JPG Law provides the material on its web page for information purposes only and not as legal advice. Jason does not intend to create an attorney-client relationship with you, and you should not assume such a relationship or act on any material from these pages without seeking professional counsel. This website may be considered attorney advertising in some states. Prior results do not guarantee a similar outcome.</p>
       <span class="footer-copy">&copy; 2025 JPG Law</span>

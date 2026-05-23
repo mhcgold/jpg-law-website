@@ -53,3 +53,9 @@ services:
       - type: rewrite
         source: /contact
         destination: /contact/
+      - type: rewrite
+        source: /gc-subscription
+        destination: /gc-subscription/
+      - type: rewrite
+        source: /practice-areas/legal-tech
+        destination: /practice-areas/legal-tech/
