@@ -59,3 +59,29 @@ services:
       - type: rewrite
         source: /practice-areas/legal-tech
         destination: /practice-areas/legal-tech/
+
+  # ── Attorney review checkout service ──────────────────────
+  - type: web
+    name: jpg-law-checkout
+    env: python
+    rootDir: checkout
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --workers 1 --threads 4 --bind 0.0.0.0:$PORT --timeout 30 app:app
+    healthCheckPath: /health
+    envVars:
+      - key: JPG_STRIPE_SECRET_KEY
+        sync: false
+      - key: JPG_STRIPE_WEBHOOK_SECRET
+        sync: false
+      - key: JPG_STRIPE_TEST_BYPASS
+        value: "false"
+      - key: PACTA_CHECKOUT_SECRET
+        sync: false
+      - key: PACTA_CALLBACK_SECRET
+        sync: false
+      - key: PACTA_BASE_URL
+        value: https://compliance.pactalegal.ai
+      - key: BASE_URL
+        value: https://checkout.jpg-law.net
+      - key: SECRET_KEY
+        generateValue: true

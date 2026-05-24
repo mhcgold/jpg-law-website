@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error — JPG Law</title>
+  <link rel="icon" type="image/x-icon" href="https://www.jpg-law.net/favicon.ico">
+  <link rel="stylesheet" href="https://www.jpg-law.net/assets/css/style.css">
+  <style>
+    .error-wrap { max-width:480px; margin:0 auto; padding:80px 24px; text-align:center; }
+    .error-code { font-size:4rem; font-weight:800; color:var(--accent); line-height:1; margin-bottom:16px; }
+    .error-msg { background:var(--bg-2); border:1px solid var(--border); border-radius:var(--radius); padding:16px 20px; font-size:0.88rem; color:var(--text-muted); margin:20px 0; text-align:left; }
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="https://www.jpg-law.net/" class="nav-logo">
+      <img src="https://www.jpg-law.net/assets/images/logo.png" alt="JPG Law">
+    </a>
+  </div>
+</nav>
+<main>
+  <div class="error-wrap">
+    <div class="error-code">{{ code or '?' }}</div>
+    <h2 style="margin-bottom:12px;">Something went wrong</h2>
+    <div class="error-msg">{{ message }}</div>
+    <p style="color:var(--text-muted); font-size:0.9rem;">
+      Please return to Pacta and try again, or contact
+      <a href="mailto:info@jpg-law.net">info@jpg-law.net</a> if the issue persists.
+    </p>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Cancelled — JPG Law</title>
+  <link rel="icon" type="image/x-icon" href="https://www.jpg-law.net/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://www.jpg-law.net/assets/css/style.css">
+  <style>
+    .cancel-wrap { max-width:520px; margin:0 auto; padding:80px 24px; text-align:center; }
+    .cancel-icon {
+      width:64px; height:64px; border-radius:50%;
+      background:var(--bg-2); border:2px solid var(--border);
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.8rem; margin:0 auto 24px;
+    }
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="https://www.jpg-law.net/" class="nav-logo">
+      <img src="https://www.jpg-law.net/assets/images/logo.png" alt="JPG Law">
+    </a>
+  </div>
+</nav>
+
+<main>
+  <div class="cancel-wrap">
+    <div class="cancel-icon">←</div>
+    <h1 style="font-size:clamp(1.4rem,3vw,2rem); margin-bottom:12px;">Payment cancelled</h1>
+    <p style="color:var(--text-muted);">
+      No charge was made. Your handbook is unchanged and you can request an attorney
+      review again at any time from the Pacta Handbook dashboard.
+    </p>
+    <div style="margin-top:32px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+      <a href="{{ engage_url }}" class="btn btn-primary">Back to engagement letter</a>
+      <a href="{{ pacta_url }}" class="btn btn-outline">Return to Pacta</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p class="footer-disclaimer">Jason Paul Gehlhausen d/b/a JPG Law. Attorney advertising in some states.</p>
+      <span class="footer-copy">&copy; 2025 JPG Law</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

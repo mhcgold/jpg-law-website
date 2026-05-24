@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attorney Review Engagement — JPG Law</title>
+  <link rel="icon" type="image/x-icon" href="https://www.jpg-law.net/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Reuse the live site's design system -->
+  <link rel="stylesheet" href="https://www.jpg-law.net/assets/css/style.css">
+  <style>
+    /* ── Engagement letter page ─────────────────────────────── */
+    .engage-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    /* Source badge */
+    .source-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-light);
+      border: 1px solid rgba(45,95,168,0.2);
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+    .source-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    /* Fee summary card */
+    .fee-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin: 32px 0;
+    }
+    .fee-card-header {
+      padding: 16px 24px;
+      background: var(--bg-2);
+      border-bottom: 1px solid var(--border);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+    }
+    .fee-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+    .fee-row:last-child { border-bottom: none; }
+    .fee-row-label { color: var(--text-muted); }
+    .fee-row-amount { font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; }
+    .fee-row.total {
+      background: var(--bg-2);
+      border-top: 2px solid var(--border-2);
+    }
+    .fee-row.total .fee-row-label { font-weight: 700; color: var(--text); }
+    .fee-row.total .fee-row-amount {
+      font-size: 1.1rem;
+      color: var(--accent);
+    }
+    .state-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin: 2px 3px;
+      background: var(--bg-3);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+    .state-tag.complex {
+      background: rgba(45,95,168,0.09);
+      color: var(--accent);
+      border-color: rgba(45,95,168,0.2);
+    }
+
+    /* Engagement letter */
+    .letter-wrap {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px 48px;
+      margin: 32px 0;
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+    }
+    .letter-wrap h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .letter-wrap p { margin-bottom: 14px; }
+    .letter-wrap p:last-child { margin-bottom: 0; }
+    .letter-wrap strong { color: var(--text); }
+    @media (max-width: 640px) {
+      .letter-wrap { padding: 24px 20px; }
+    }
+
+    /* Accept + Pay form */
+    .pay-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      margin-top: 32px;
+    }
+    .accept-row {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 24px;
+      padding: 16px 20px;
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .accept-row input[type="checkbox"] {
+      margin-top: 2px;
+      width: 16px; height: 16px;
+      flex-shrink: 0;
+      accent-color: var(--accent);
+    }
+    .accept-label {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .accept-label strong { color: var(--text); }
+
+    .pay-btn {
+      display: block;
+      width: 100%;
+      padding: 14px 24px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      transition: background 0.15s, opacity 0.15s;
+    }
+    .pay-btn:hover:not(:disabled) { background: var(--accent-dim); }
+    .pay-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .bypass-note {
+      margin-top: 12px;
+      font-size: 0.78rem;
+      color: var(--text-faint);
+      text-align: center;
+    }
+    .security-note {
+      margin-top: 16px;
+      font-size: 0.78rem;
+      color: var(--text-faint);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* Jason strip */
+    .attorney-strip {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      padding: 20px 24px;
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-top: 32px;
+    }
+    .attorney-photo {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top;
+      flex-shrink: 0;
+      border: 2px solid var(--border-2);
+    }
+    .attorney-name { font-weight: 700; color: var(--text); font-size: 0.95rem; }
+    .attorney-title { font-size: 0.8rem; color: var(--text-faint); margin-top: 2px; }
+    .attorney-bio { font-size: 0.83rem; color: var(--text-muted); margin-top: 6px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation (matches jpg-law.net) ───────────────────── -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="https://www.jpg-law.net/" class="nav-logo">
+      <img src="https://www.jpg-law.net/assets/images/logo.png" alt="JPG Law">
+    </a>
+    <ul class="nav-links">
+      <li><a href="https://www.jpg-law.net/">Home</a></li>
+      <li><a href="https://www.jpg-law.net/about/">About</a></li>
+      <li><a href="https://www.jpg-law.net/practice-areas/">Practice Areas</a></li>
+      <li><a href="https://www.jpg-law.net/gc-subscription/" style="color:var(--accent);">GC Subscription</a></li>
+      <li><a href="https://www.jpg-law.net/contact/">Contact</a></li>
+    </ul>
+    <a href="https://www.jpg-law.net/contact/" class="btn btn-primary nav-cta">Contact us</a>
+    <button class="nav-mobile-toggle" aria-label="Open menu">&#9776;</button>
+  </div>
+</nav>
+
+<!-- ── Page content ───────────────────────────────────────── -->
+<main>
+  <div class="engage-wrap">
+
+    <div class="source-badge">Referred from Pacta Handbook</div>
+    <h1 style="font-size:clamp(1.6rem,3.5vw,2.4rem); margin-bottom:8px;">Attorney Review Engagement</h1>
+    <p style="font-size:1rem; color:var(--text-muted); margin-bottom:0;">
+      Review by <strong style="color:var(--text);">Jason Paul Gehlhausen</strong> · JPG Law, PLLC
+    </p>
+
+    <!-- ── Fee summary ─────────────────────────────────────── -->
+    <div class="fee-card">
+      <div class="fee-card-header">Fee breakdown — {{ company_name }}</div>
+
+      <div class="fee-row">
+        <span class="fee-row-label">Federal baseline review</span>
+        <span class="fee-row-amount">$500.00</span>
+      </div>
+
+      {% if complex_states %}
+      <div class="fee-row">
+        <span class="fee-row-label">
+          Complex states ({{ complex_states|length }} × $350)
+          <div style="margin-top:6px;">
+            {% for s in complex_states %}
+              <span class="state-tag complex">{{ s }}</span>
+            {% endfor %}
+          </div>
+        </span>
+        <span class="fee-row-amount">${{ "{:,.2f}".format(complex_states|length * 350) }}</span>
+      </div>
+      {% endif %}
+
+      {% if standard_states %}
+      <div class="fee-row">
+        <span class="fee-row-label">
+          Standard states ({{ standard_states|length }} × $150)
+          <div style="margin-top:6px;">
+            {% for s in standard_states %}
+              <span class="state-tag">{{ s }}</span>
+            {% endfor %}
+          </div>
+        </span>
+        <span class="fee-row-amount">${{ "{:,.2f}".format(standard_states|length * 150) }}</span>
+      </div>
+      {% endif %}
+
+      <div class="fee-row total">
+        <span class="fee-row-label">Total engagement fee</span>
+        <span class="fee-row-amount">{{ amount_dol }}</span>
+      </div>
+    </div>
+
+    <!-- ── Engagement letter ───────────────────────────────── -->
+    <div class="letter-wrap">
+      <h3>Engagement Letter — JPG Law, PLLC</h3>
+
+      <p>{{ today }}</p>
+
+      <p>
+        <strong>Client:</strong> {{ company_name }}<br>
+        <strong>Contact:</strong> {{ user_name or "Authorized Representative" }}<br>
+        <strong>E-mail:</strong> {{ user_email }}
+      </p>
+
+      <p>Dear {{ user_name or "Client" }},</p>
+
+      <p>
+        Thank you for engaging JPG Law, PLLC for attorney review services. This letter confirms the
+        terms of our engagement. Please read it carefully before proceeding with payment.
+      </p>
+
+      <p><strong>Scope of Services</strong></p>
+      <p>
+        JPG Law, PLLC will provide a written legal review of the AI-generated employment handbook
+        produced by Pacta for <strong>{{ company_name }}</strong>, covering federal employment law and
+        the following state jurisdictions:
+        {% if states %}
+          {% for s in states %}<strong>{{ state_label(s) }}</strong>{% if not loop.last %}, {% endif %}{% endfor %}.
+        {% else %}
+          all applicable jurisdictions as identified in your handbook.
+        {% endif %}
+        The review will identify legal compliance gaps, inaccurate statements of law, missing
+        required provisions, and areas requiring customization based on your specific workforce
+        and operating model.
+      </p>
+
+      <p>
+        Deliverables include a written review memorandum with specific recommended revisions.
+        Jason Paul Gehlhausen will personally conduct and sign the review. Turnaround is
+        <strong>5–7 business days</strong> from receipt of payment.
+      </p>
+
+      <p><strong>What Is Not Included</strong></p>
+      <p>
+        This engagement covers a single written review of the handbook as generated at the time
+        of engagement. Implementation of recommendations, revisions to the handbook itself,
+        ongoing compliance monitoring, and matters requiring local counsel in jurisdictions
+        where Jason is not admitted are outside this engagement. This engagement does not
+        create an ongoing attorney-client relationship beyond the scope described above.
+      </p>
+
+      <p><strong>Fee and Payment</strong></p>
+      <p>
+        The flat fee for this engagement is <strong>{{ amount_dol }}</strong>, payable in full
+        prior to commencement of the review. The fee is non-refundable once work has begun.
+        Payment is processed securely through Stripe.
+      </p>
+
+      <p><strong>Attorney-Client Relationship</strong></p>
+      <p>
+        An attorney-client relationship will be formed with <strong>{{ company_name }}</strong>
+        upon receipt of payment and is limited to the scope described in this letter. Jason Paul
+        Gehlhausen is licensed in the State of Indiana. For matters requiring licensure in
+        other jurisdictions, local counsel will be coordinated as needed.
+      </p>
+
+      <p><strong>Conflicts</strong></p>
+      <p>
+        By engaging JPG Law, you represent that you are not aware of any conflict of interest
+        that would prevent this representation. If a conflict is identified after engagement,
+        JPG Law will promptly notify you.
+      </p>
+
+      <p><strong>Confidentiality</strong></p>
+      <p>
+        All information shared in connection with this engagement is protected by
+        attorney-client privilege and JPG Law's professional confidentiality obligations.
+      </p>
+
+      <p>
+        By checking the acceptance box and completing payment below, you confirm that you have
+        read this engagement letter, have authority to bind <strong>{{ company_name }}</strong>,
+        and agree to its terms.
+      </p>
+
+      <p style="margin-top:24px;">
+        Sincerely,<br><br>
+        <strong>Jason Paul Gehlhausen</strong><br>
+        Managing Attorney · JPG Law, PLLC<br>
+        1221 N New Jersey St, Suite 1/2<br>
+        Indianapolis, IN 46202<br>
+        info@jpg-law.net · (317) 324-8451
+      </p>
+    </div>
+
+    <!-- ── Accept + Pay ────────────────────────────────────── -->
+    <div class="pay-box">
+      <form id="payForm" method="POST" action="/checkout">
+        <input type="hidden" name="token"        value="{{ raw_token }}">
+        <input type="hidden" name="review_id"    value="{{ review_id }}">
+        <input type="hidden" name="profile_id"   value="{{ profile_id }}">
+        <input type="hidden" name="draft_id"     value="{{ draft_id }}">
+        <input type="hidden" name="amount_cents" value="{{ amount_cents }}">
+        <input type="hidden" name="company_name" value="{{ company_name }}">
+        <input type="hidden" name="user_email"   value="{{ user_email }}">
+        <input type="hidden" name="states"       value="{{ states|join(',') }}">
+
+        <div class="accept-row">
+          <input type="checkbox" id="acceptBox" required>
+          <label class="accept-label" for="acceptBox">
+            I have read and agree to the terms of this engagement letter. I confirm that I am
+            authorized to bind <strong>{{ company_name }}</strong> and understand that payment is
+            non-refundable once work has begun.
+          </label>
+        </div>
+
+        <button type="submit" class="pay-btn" id="payBtn" disabled>
+          Pay {{ amount_dol }} and submit for review
+        </button>
+
+        {% if bypass %}
+        <p class="bypass-note">⚡ Test mode — no real charge will occur</p>
+        {% endif %}
+      </form>
+
+      <div class="security-note">
+        🔒 Payment processed securely by Stripe · JPG Law never stores your card details
+      </div>
+    </div>
+
+    <!-- ── Jason strip ─────────────────────────────────────── -->
+    <div class="attorney-strip">
+      <img src="https://www.jpg-law.net/assets/images/jason-gehlhausen.jpg"
+           alt="Jason Paul Gehlhausen" class="attorney-photo">
+      <div>
+        <div class="attorney-name">Jason Paul Gehlhausen</div>
+        <div class="attorney-title">Managing Attorney · JPG Law, PLLC · Licensed in Indiana · CIPP/US</div>
+        <div class="attorney-bio">
+          15+ years advising technology and staffing clients. All reviews are conducted
+          personally by Jason — not delegated to associates or AI.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <a href="https://www.jpg-law.net/" class="footer-logo">
+        <img src="https://www.jpg-law.net/assets/images/logo.png" alt="JPG Law" loading="lazy">
+      </a>
+      <p class="footer-tagline">Fractional General Counsel for Staffing, Technology, and Growth Companies.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-heading">Practice Areas</div>
+      <a href="https://www.jpg-law.net/practice-areas/staffing/">Staffing &amp; Contingent Workforces</a>
+      <a href="https://www.jpg-law.net/practice-areas/employment/">Employment Law</a>
+      <a href="https://www.jpg-law.net/practice-areas/technology/">Technology &amp; SaaS</a>
+      <a href="https://www.jpg-law.net/practice-areas/privacy/">Privacy &amp; Data Protection</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-heading">Contact</div>
+      <a href="mailto:info@jpg-law.net">info@jpg-law.net</a>
+      <a href="tel:+13173248451">(317) 324-8451</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <p class="footer-disclaimer">
+        Jason Paul Gehlhausen d/b/a JPG Law provides the material on its web page for
+        information purposes only and not as legal advice. This website may be considered
+        attorney advertising in some states. Prior results do not guarantee a similar outcome.
+      </p>
+      <span class="footer-copy">&copy; 2025 JPG Law</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://www.jpg-law.net/assets/js/main.js"></script>
+<script>
+  // Enable Pay button only when checkbox is checked
+  const box = document.getElementById('acceptBox');
+  const btn = document.getElementById('payBtn');
+  box.addEventListener('change', () => { btn.disabled = !box.checked; });
+
+  // Prevent double-submit
+  document.getElementById('payForm').addEventListener('submit', () => {
+    btn.disabled = true;
+    btn.textContent = 'Redirecting to secure checkout…';
+  });
+</script>
+</body>
+</html>
